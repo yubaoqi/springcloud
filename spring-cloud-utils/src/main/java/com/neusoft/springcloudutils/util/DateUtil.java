@@ -8,6 +8,7 @@ public class DateUtil {
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println("test");
+        //打印当前时间
         return "当前时间 "+format.format(date);
     }
 }
