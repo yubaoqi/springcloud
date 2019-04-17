@@ -16,6 +16,7 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
+        <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-server</module>
         <module>spring-cloud-client</module>
         <module>spring-cloud-utils</module>

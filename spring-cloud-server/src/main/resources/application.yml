@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: server
+#热部署配置
+  devtools:
+    restart:
+      additional-paths: src/main/java
+
+server:
+  port: 8002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
