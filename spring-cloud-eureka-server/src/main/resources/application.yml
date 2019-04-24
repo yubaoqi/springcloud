@@ -1,6 +1,12 @@
 spring:
  application:
   name: eureka-server
+ security:
+  basic:
+   enable: true
+  user:
+   name: yubaoqi
+   password: ENC(1zH2sstZRRf3PWI05Ot8iw==)
 
 server:
  port: 8001
@@ -12,5 +18,11 @@ eureka:
   registerWithEureka: false
   fetchRegistry: false
   service-url:
-   defaultZone: http://localhost:8001/eureka/
+   defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+ server:
+  enable-self-preservation: false
 
+
+jasypt:
+ encryptor:
+  password: password

@@ -8,8 +8,20 @@ spring:
 
 server:
   port: 8003
-
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8001/eureka/
+      defaultZone: http://${center.user.name}:${center.user.password}@localhost:8001/eureka/
+management:
+ server:
+   port: 9000
+ endpoints:
+   web:
+     base-path: /
+     exposure:
+       include: "*"
+
+center:
+  user:
+    name: yubaoqi
+    password: yubaoqi

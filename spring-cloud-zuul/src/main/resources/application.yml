@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: zuul-server
+server:
+  port: 8005
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${center.user.name}:${center.user.password}@localhost:8001/eureka/
+
+center:
+  user:
+    name: yubaoqi
+    password: yubaoqi
+
+#设置路由路径 client服务映射
+zuul:
+  routes:
+    client: /soc/**
+  #忽略路由服务
+  #ignored-services:
+
+
+#logging:
+#  level:
+#    com.netflix: debug

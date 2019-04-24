@@ -17,8 +17,10 @@
 
     <modules>
         <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-zuul</module>
         <module>spring-cloud-server</module>
         <module>spring-cloud-client</module>
+        <module>spring-cloud-feign-client</module>
         <module>spring-cloud-utils</module>
     </modules>
 

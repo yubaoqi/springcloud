@@ -1,3 +1,5 @@
+server:
+  port: 8002
 spring:
   application:
     name: server
@@ -6,10 +8,12 @@ spring:
     restart:
       additional-paths: src/main/java
 
-server:
-  port: 8002
-
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8001/eureka/
+      defaultZone: http://${center.user.username}:${center.user.password}@localhost:8001/eureka/
+
+center:
+  user:
+    username: yubaoqi
+    password: yubaoqi
