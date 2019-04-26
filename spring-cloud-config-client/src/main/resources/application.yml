@@ -1,35 +1,25 @@
 spring:
   application:
-    name: client
+    name: config-client
   cloud:
     config:
       name: ${spring.application.name}
-  #热部署配置
-#  devtools:
-#    restart:
-#      additional-paths: src/main/java
-
-
 server:
-  port: 8003
+  port: 8009
+
 eureka:
   client:
     service-url:
       defaultZone: http://${center.user.name}:${center.user.password}@localhost:8001/eureka/
-management:
-# server:
-#   port: 9000
- endpoints:
-   web:
-#     base-path: /
-     exposure:
-       include: "*"
 
 center:
   user:
     name: yubaoqi
     password: yubaoqi
 
-logging:
-  level:
-    com.neusoft: debug
+#打开actuator监控端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
